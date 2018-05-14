@@ -22,7 +22,7 @@ public class ReadWriteLockExample {
 		readWriteLock.readLock().lock();
 
 		    // multiple readers can enter this section
-		    // if not locked for writing, and not writers waiting
+		    // if not locked for writing, and no writers waiting
 		    // to lock for writing.
 
 		readWriteLock.readLock().unlock();

@@ -44,7 +44,7 @@ public class SemaphoreExample {
 		 
 		 If you use a semaphore to send signals between threads, then you would typically have one thread call the acquire() method, and the other thread to call the release() method.
 
-If no permits are available, the acquire() call will block until a permit is released by another thread. Similarly, a release() calls is blocked if no more permits can be released into this semaphore.
+If no permits are available, the acquire() call will block until a permit is released by another thread. Similarly, a release() call is blocked if no more permits can be released into this semaphore.
 		 
 		 */
 	}

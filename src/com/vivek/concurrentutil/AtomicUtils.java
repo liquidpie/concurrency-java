@@ -104,7 +104,7 @@ public class AtomicUtils {
 		/**
 		 * AtomicIntegerArray
 		 * 
-		 * AtomicLongArray & AtomicReferenceArray are same as AtominIntegerArray
+		 * AtomicLongArray & AtomicReferenceArray are same as AtomicIntegerArray
 		 */
 		AtomicIntegerArray array = new AtomicIntegerArray(10); // 10 being the capacity
 

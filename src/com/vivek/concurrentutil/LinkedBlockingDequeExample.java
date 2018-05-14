@@ -7,7 +7,7 @@ public class LinkedBlockingDequeExample {
 
 	/**
 	 * A BlockingDeque could be used if threads are both producing and consuming elements of the same queue. 
-	 * It could also just be used if the producting thread needs to insert at both ends of the queue, 
+	 * It could also just be used if the producing thread needs to insert at both ends of the queue,
 	 * and the consuming thread needs to remove from both ends of the queue. 
 	 * 
 	 * A thread will produce elements and insert them into either end of the queue. 
