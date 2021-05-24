@@ -5,7 +5,7 @@ import java.util.List;
 
 public class BlockingQueue<T> {
 	
-	private List<T> queue = new ArrayList<>();
+	private final List<T> queue = new ArrayList<>();
 	private final int SIZE;
 	
 	public BlockingQueue(int size) {
