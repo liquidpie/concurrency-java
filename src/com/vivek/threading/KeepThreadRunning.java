@@ -1,9 +1,18 @@
 package com.vivek.threading;
 
+import java.util.concurrent.TimeUnit;
+
 /**
- * After starting a thread, how could we keep it running as part of
+ * After starting a thread, how could we keep it running until explicitly killed
  */
 public class KeepThreadRunning {
+
+    public static void main(String[] args) throws InterruptedException {
+        Worker worker = new Worker();
+        worker.start();
+        TimeUnit.MILLISECONDS.sleep(25000);
+        worker.stopThread();
+    }
 
     private static class Worker extends Thread {
 
@@ -13,7 +22,7 @@ public class KeepThreadRunning {
         public void run() {
             running = true;
             while (running) {
-                running = doWork();
+                doWork();
                 if (Thread.interrupted()) {
                     return;
                 }
@@ -26,13 +35,12 @@ public class KeepThreadRunning {
 
     }
 
-    static boolean doWork() {
+    static void doWork() {
         try {
+            System.out.println("Task Started");
             Thread.sleep(10000);
-            return true;
-        } catch (InterruptedException ex) {
-            return false;
-        }
+            System.out.println("Task Finished");
+        } catch (InterruptedException ignored) { }
     }
 
 }
