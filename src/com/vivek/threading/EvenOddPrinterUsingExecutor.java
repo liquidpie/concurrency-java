@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
 /*
  * This is based on producer-consumer problem
  */
-public class ExecuteTwoThreadsAlternately {
+public class EvenOddPrinterUsingExecutor {
 
 	public static void main(String[] args) {
 		ExecutorService es = Executors.newFixedThreadPool(2);
